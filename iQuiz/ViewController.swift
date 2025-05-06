@@ -65,7 +65,20 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         tableView.delegate = self
         tableView.dataSource = self
     }
-
-
+    
+    @IBOutlet weak var settingButton: UIButton!
+    @IBAction func settingButton(_ sender: Any) {
+        let alert = UIAlertController(title: "You selected", message: "settings", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Close the alert"), style: .default, handler: { _ in
+            NSLog("User said cancel.")
+            alert.dismiss(animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Close the alert"), style: .default, handler: { _ in
+            NSLog("User said OK.")
+            alert.dismiss(animated: true)
+        }))
+        self.present(alert, animated: true)
+    }
+    
 }
 

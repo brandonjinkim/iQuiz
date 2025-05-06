@@ -132,7 +132,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <segue destination="Xte-D0-N90" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="3nd-8p-LEb"/>
+                                    <action selector="settingButton:" destination="Ggb-6u-Pdw" eventType="touchUpInside" id="Ad9-oN-fyz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,6 +147,9 @@
                             <constraint firstItem="ckR-4b-lMN" firstAttribute="leading" secondItem="FI5-pA-QZP" secondAttribute="leading" id="xnQ-jM-UNO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingButton" destination="lT8-mS-GA4" id="H7H-Fi-Rxv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6OV-nq-9ll" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
