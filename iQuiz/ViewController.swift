@@ -66,6 +66,20 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         tableView.dataSource = self
     }
     
+    // functionality
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            performSegue(withIdentifier: "MathViewController", sender: nil)
+        }
+        else if indexPath.row == 1 {
+            performSegue(withIdentifier: "MarvelViewController", sender: nil)
+        }
+        else if indexPath.row == 2 {
+            self.performSegue(withIdentifier: "ScienceViewController", sender: nil)
+        }
+    }
+    
     @IBOutlet weak var settingButton: UIButton!
     @IBAction func settingButton(_ sender: Any) {
         let alert = UIAlertController(title: "You selected", message: "settings", preferredStyle: .alert)
@@ -81,4 +95,3 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
     
 }
-
