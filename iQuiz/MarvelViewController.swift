@@ -22,6 +22,17 @@ class MarvelViewController : UIViewController {
     
     @IBOutlet weak var submitButton : UIButton!
     
+    @IBOutlet weak var swipe: UISwipeGestureRecognizer!
+    @IBAction func swipeAction(_ sender: UISwipeGestureRecognizer) {
+        if sender.direction == .left {
+            performSegue(withIdentifier: "ViewController", sender: self)
+        }
+        else if sender.direction == .right {
+            
+        }
+    }
+    
+    
     @objc func buttonPressed(_ sender: UIButton) {
         answerLabel.text = "You selected \(sender.currentTitle!)"
         userAnswer = sender.currentTitle!
